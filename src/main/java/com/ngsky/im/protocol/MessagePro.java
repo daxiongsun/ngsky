@@ -1,5 +1,7 @@
 package com.ngsky.im.protocol;
 
+import io.netty.channel.Channel;
+
 /**
  * @Description 消息传输协议
  * @Author daxiong
@@ -10,6 +12,7 @@ public class MessagePro {
     private byte type;   // 类型
     private byte status;  // 状态
     private String body;  // 消息体
+    private Channel channel;  // 消息通道
 
     public byte getSign() {
         return sign;
@@ -43,6 +46,14 @@ public class MessagePro {
         this.body = body;
     }
 
+    public Channel getChannel() {
+        return channel;
+    }
+
+    public void setChannel(Channel channel) {
+        this.channel = channel;
+    }
+
     @Override
     public String toString() {
         return "MessagePro{" +
@@ -50,6 +61,7 @@ public class MessagePro {
                 ", type=" + type +
                 ", status=" + status +
                 ", body='" + body + '\'' +
+                ", channel=" + channel +
                 '}';
     }
 }

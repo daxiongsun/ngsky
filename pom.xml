@@ -6,7 +6,11 @@
 
     <groupId>com.ngsky</groupId>
     <artifactId>ngskyim</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ngsky-client</module>
+    </modules>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
@@ -45,8 +49,12 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.8.0-alpha0</version>
         </dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180130</version>
+        </dependency>
     </dependencies>
 
     <build>
